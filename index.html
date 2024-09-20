@@ -3,130 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gaurav Badoni | Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-        header h1 {
-            margin: 0;
-        }
-        section {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        section h2 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            background: #f9f9f9;
-            margin: 0.5rem 0;
-            padding: 1rem;
-            border-left: 4px solid #333;
-        }
-        .contact-info {
-            text-align: center;
-            margin-top: 1rem;
-        }
-        .contact-info a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>Gaurav Badoni</h1>
-        <p>Email: <a href="mailto:gauravzen27@gmail.com">gauravzen27@gmail.com</a> | Mobile: +91 7906110687</p>
-    </header>
-
-    <section>
-        <h2>Profile Summary</h2>
-        <p>
-            I am Gaurav Badoni, a passionate professional with a strong foundation in [mention your field, e.g., software development, data analysis, etc.]. I strive to deliver high-quality results through a dedication to innovation and continuous learning.
-        </p>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>[Skill 1: e.g., Programming in Python, Java, etc.]</li>
-            <li>[Skill 2: e.g., Web Development: HTML, CSS, JavaScript]</li>
-            <li>[Skill 3: e.g., Data Analysis]</li>
-            <li>[Skill 4: e.g., Project Management]</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <strong>[Job Title]</strong> at [Company Name]  
-                <br><small>[Month, Year – Present]</small>
-                <p>
-                    [Describe your role and responsibilities. Mention projects and achievements.]
-                </p>
-            </li>
-            <li>
-                <strong>[Previous Job Title]</strong> at [Previous Company Name]  
-                <br><small>[Month, Year – Month, Year]</small>
-                <p>
-                    [Describe your previous role and contributions.]
-                </p>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li><strong>[Degree Name]</strong> from [Institution Name]  
-            <br><small>Graduated: [Year]</small></li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Project 1: [Project Name]</strong>
-                <p>[Brief description of the project and your role.]</p>
-            </li>
-            <li>
-                <strong>Project 2: [Project Name]</strong>
-                <p>[Brief description of another project and your role.]</p>
-            </li>
-        </ul>
-    </section>
-
-    <footer class="contact-info">
-        <p>Contact me: 
-            <a href="mailto:gauravzen27@gmail.com">Email</a> | 
-            <a href="tel:+917906110687">Call</a>
-        </p>
-    </footer>
-
+    <div class="container">
+        <h1>Movie Search</h1>
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+        <button id="searchButton">Search</button>
+        <div id="movieContainer"></div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
