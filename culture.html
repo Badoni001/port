@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image with Text</title>
+  <style>
+   
+    .image-container {
+      position: relative;        
+      width: 100%;              
+      height: 50vh;            
+      overflow: hidden;        
+    }
+
+  
+    .image-container img {
+      width: 100%;              
+      height: 100%;             
+      object-fit: cover;       
+    }
+
+    
+    .image-text {
+      position: absolute;       
+      top: 20px;                
+      left: 20px;               
+      color: white;             
+      font-size: 60px;          
+      font-family: Luminari; 
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;       
+      border-radius: 5px;       
+    }
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 5px;
+  padding:5px;
+  background-color: #f4f4f4;
+
+}
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px; /* Space between images */
+  padding: 20px;
+}
+
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-card img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  display: block;
+  border-radius: 8px;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  opacity: 1; /* Always visible */
+}
+
+
+.overlay h3 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+
+.overlay p {
+  margin: 5px 0 0;
+  font-size: 0.8em;
+}
+
+
+@media (max-width: 1024px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+        .wrapper {
+            display: flex;
+            gap: 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            background: #F2EFE7;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 4px;
+            max-width: 650px;
+        }
+
+        .container img {
+            max-width: 150px;
+            max-height: 400px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #333;
+        }
+
+
+ table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+      
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+<img src="banner.jpeg" alt="Sample Image">
+    <div class="image-text">Uttrakhand</div>
+  </div>
+
+    <h1>Voices and Culture</h1>
+    <p>Uttarakhand is known as much for its natural beauty as for its people and their culture. The state's unique culture encompasses traditional rites, ritual, beliefs, folklore, customs and language. The warm and friendly residents of the states, who also call themselves Pahari, celebrate throughout the year, marking their festivals with music and dance.
+</p>
+
+
+    <h1>Festivals</h1>
+  
+
+<div class="image-grid">
+    <!-- Image Card 1 -->
+    <div class="image-card">
+      <img src="Egaas.jpg" alt="Anduri Utsav">
+      <div class="overlay">
+        <h3>Anduri Utsav</h3>
+        <p>Igas or Igas Diwali is celebrated 11 days after Diwali. Folklore says that the news of Lord Rama's return to Ayodhya from exile reached the hilly regions of Kumaon and Garhwal 11 days late.</p>
+      </div>
+    </div>
+
+    <!-- Image Card 2 -->
+    <div class="image-card">
+      <img src="im11.jpg" alt="Bat Savitri">
+      <div class="overlay">
+        <h3>Bat Savitri</h3>
+        <p>Bat Savitri or Vat Savitri is a festival observed by married women, who fast through the day and pray for their husband's well-being.</p>
+      </div>
+    </div>
+
+    <!-- Image Card 3 -->
+    <div class="image-card">
+      <img src="im12.jpg" alt="Bhaitauli">
+      <div class="overlay">
+        <h3>Bhaitauli</h3>
+        <p>A festival dedicated to married women of the state, Bhitauli is celebrated in the month of March or April. During this festival, a married woman's brother, parents or any other relative visit her and bring with them sweets, fruits and new clothes</p>
+      </div>
+    </div>
+
+ <!-- Image Card 4 -->
+    <div class="image-card">
+      <img src="im13.jpg" alt="Bhaitauli">
+      <div class="overlay">
+        <h3>Phool Dei</h3>
+        <p>The spring harvest festival Phool Dei is celebrated in mid-March. During this festival young girls pluck flowers to decorate their houses</p>
+      </div>
+    </div>
+
+ <!-- Image Card 4 -->
+    <div class="image-card">
+      <img src="im14.jpg" alt="Bhaitauli">
+      <div class="overlay">
+        <h3>Harela</h3>
+        <p>This agricultural festival is celebrated thrice every year. The first one is celebrated during Chaitra Navratri (March-April), the second one, during Sharad Navratri (September) and the third one,  Shravan Harela, in the rainy season (July). </p>
+      </div>
+    </div>
+ <!-- Image Card 4 -->
+    <div class="image-card">
+      <img src="im15.jpg" alt="Bhaitauli">
+      <div class="overlay">
+        <h3>Kanwar Yatra</h3>
+        <p>Kanwar Yatra is the annual pilgrimage of kanwariyas or Lord Shiva's devotees to Haridwar, Gaumukh or Gangotri to fetch water from River Ganga</p>
+      </div>
+    </div>
+ <!-- Image Card 4 -->
+    <div class="image-card">
+      <img src="im16.jpg" alt="Bhaitauli">
+      <div class="overlay">
+        <h3>Ghee Sankranti</h3>
+        <p>The vibrant Ghee Sankranti festival is held in August. Mostly celebrated in villages by farmers, it marks the harvesting season to show gratitude to nature and gods for a good harvest and prosperity.</p>
+      </div>
+    </div>
+ <!-- Image Card 4 -->
+    <div class="image-card">
+      <img src="im17.jpg" alt="Bhaitauli">
+      <div class="overlay">
+        <h3>Kandalii</h3>
+        <p>This unique festival of Pithoragarh district coincides with the blooming of the kandali flower, which blooms once every 12 years (it last bloomed in 2011)..</p>
+      </div>
+    </div>
+</div>
+
+<h1>Uttarakhandi Cuisine</h1>
+ <div class="wrapper">
+        <div class="container">
+            <img src="rotana.jpg" alt="A descriptive alt text for image 1">
+            <div class="description">
+                <p>This is a traditional dish (pakwan) in Uttarakhand, also known as<b> Rotana </b>locally. It is a kind of bite size fried cookie made with whole wheat flour, milk, desi ghee, fennel seeds, semolina(suji) and jaggery. In some parts sugar is added instead of jaggery.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="arsha.jpg" alt="A descriptive alt text for image 2">
+            <div class="description">
+                <p><b>Arsa</b> is a traditional sweet dish from Rajasthan, India. It is made with rice flour, jaggery, and ghee. The dough is shaped into small discs and deep-fried until golden brown.</p>
+            </div>
+        </div>
+    </div>
+
+ <div class="wrapper">
+        <div class="container">
+            <img src="phaanu.jpg" alt="A descriptive alt text for image 1">
+            <div class="description">
+                <p><b>Phaanu</b> is a dish that is famous mostly in the Garhwal region of Uttarakhand.It is rather complicated to prepare since it is made by mixing lentils of different varieties that are soaked in water overnight.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="kheer.jpg" alt="A descriptive alt text for image 2">
+            <div class="description">
+                <p><b>Jhangora</b>is a type of millet that is the main ingredient of this dessert. Jhangora Ki Kheer has an unforgettable taste and is a must-try after a heavy meal of the Garhwali cuisines.</p>
+            </div>
+        </div>
+    </div>
+
+
+<h1>Religion and Spirituality</h1>
+<div class="image-container">
+<img src="chaar.png" alt="Sample Image">
+  </div>
+<p>The Chota Char Dham (lit. 'the small four abodes/seats' or 'the small circuit of four abodes/seats') is an important modern Hindu pilgrimage circuit[1] in Uttarakhand, in the Indian Himalayas. Located in the Garhwal region of the state of Uttarakhand, the circuit consists of four sites—Gangotri, Yamunotri, Kedarnath, and Badrinath.[2] Badrinath is also one of the four destinations (with each destination being in different corners of the country) of the longer Char Dham from which the Chota Char Dham likely draws its name.[3][4]
+
+Akshaya Tritiya (April or May in the Gregorian calendar) marks the beginning of the Chota Char Dham Yatra and closes two days after Diwali, on the day of Bhai-Bij (or Bhai Dooj)[5] In May and June, tourists flock in large numbers, due to heavy rainfall greater chances of roadblocks or landslides in late July and August during monsoon season.
+
+The Annual Chota Char Dham Yatra resumed in May 2014, after being suspended during the 2013 Uttarakhand floods. The footfall has now improved due to proactive measures taken by the government of Uttarakhand.[6] In 2022, in just two months (10 June – 10 August), 2.8 million pilgrims have visited these Dhams.[7]
+
+A record 4.1 million pilgrims visited Chota Char dham in 2022.[8] Over 1.4 million pilgrims have already visited Kedarnath, over 600,000 have visited Gangotri, and over 500,000 have visited Yamunotri. Around 1.5 million pilgrims have already visited Badrinath the same year.[9]
+
+]</p>
+<h2>Origins and the original Char Dham</h2>
+<p>Originally, the appellation Char Dham referred to a pilgrimage circuit encompassing four important temples cities — Puri, Rameswaram, Dwarka, and Badrinath — located roughly at the four cardinal points of the subcontinent. An archetypal All-India pilgrimage circuit, the formation of the original Char Dham is credited to the great 8th century reformer and philosopher Shankaracharya (Adi Sankara). In the original Char Dham, three of the four sites are Vaishnava (Puri, Dwarka and Badrinath) while one is Shaiva (Rameswaram). The Chota Char Dham appeared very likely in the second half of the 20th century, as a touristic (religious tourism) label coinned for a new pilgrimage circuit in the Garhwal Himalayas region, representative of all three major Hindu sectarian traditions, with two Shakti (goddess) sites, (Yamunotri and Gangotri), one Shaiva site (Kedarnath), and one Vaishnava site (Badrinath).[citation needed]
+
+Accessible until the 1950s only by arduous and lengthy walking trails in hilly area with height repeatedly exceeded 4000 meters, the sanctuairies constituting the nowadays Chota Char Dham were regularly visited by wandering ascetics and other religious people, and those who could afford a traveling entourage. While the individual sites and the ancient pilgrimage paths conducting to these were well known to Hindus on the plains below, they were not a particularly visible aspect of yearly religious culture. After the 1962 war between India and China, accessibility to these isolated places improved, as India undertook massive road building to border area and other infrastructure investments. As pilgrims were able to travel in mini buses, jeeps and cars to nearest points of four shrines, the Chota Char dham circuit was within the reach of people with middle income. Vehicles reach up to Badrinath temple and Gangotri, Yamunotri and Kedarnath are at a distance of 10 to 15 km from nearest motorable road.[citation needed] The Chota Char Dham pilgrimage circuit is promoted by Indian Central Government and the State of Uttarakhand, in service of both governments plans of economic development and infrastructure planning in this sensitive mountainous region.
+
+</p>
+
+<h1>Top 10 Places to Visit in Uttarakhand</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Place</th>
+                <th>Location</th>
+                <th>Speciality</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mussoorie</td>
+                <td>Dehradun District</td>
+                <td>Known as the "Queen of Hills," famous for its scenic beauty and pleasant weather.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nainital</td>
+                <td>Kumaon Region</td>
+                <td>Renowned for its picturesque Naini Lake and surrounding mountains.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rishikesh</td>
+                <td>Tehri Garhwal</td>
+                <td>Yoga Capital of the World, gateway to the Himalayas, and adventure sports hub.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Haridwar</td>
+                <td>Haridwar District</td>
+                <td>Famous for the Ganga Aarti at Har Ki Pauri and religious significance.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Auli</td>
+                <td>Chamoli District</td>
+                <td>Popular skiing destination with stunning views of the Himalayan peaks.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Kedarnath</td>
+                <td>Rudraprayag District</td>
+                <td>One of the holiest Hindu shrines and a part of the Char Dham Yatra.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Badrinath</td>
+                <td>Chamoli District</td>
+                <td>Another Char Dham site, known for the Badrinath Temple dedicated to Lord Vishnu.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Valley of Flowers</td>
+                <td>Chamoli District</td>
+                <td>A UNESCO World Heritage Site, famous for its alpine flowers and biodiversity.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Jim Corbett National Park</td>
+                <td>Nainital District</td>
+                <td>India's oldest national park, renowned for its tiger reserve and wildlife safaris.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Chopta</td>
+                <td>Rudraprayag District</td>
+                <td>Known as the "Mini Switzerland of Uttarakhand," offering trekking and natural beauty.</td>
+            </tr>
+        </tbody>
+    </table>
+
+<h2>If you want to know more about uttrakhand, visit this link:</h2>
+<a href="https://en.wikipedia.org/wiki/Uttarakhand" target="_blank">Explore uttrakhand </a>
+
+
+
+
+
+<br><br><hr>
+<div class="image-container">
+<img src="k.jpg" alt="Sample Image">
+    <div class="image-text">Kerala</div>
+  </div>
+
+ <h1>A Glimpse into Kerala Culture</h1>
+<p>The intricately woven history of Kerala is deeply alluring, mystical and charming, all rolled into one. The first images that one gets when talking about Kerala Culture is of course, that of the oldest and most scientific martial arts known to man, Kalaripayattu</p>
+
+ <div class="image-grid">
+    <!-- Image Card 1 -->
+    <div class="image-card">
+      <img src="onam.jpg" alt="Onam Festival">
+      <div class="overlay">
+        <h3>Onam Festival</h3>
+        <p>The yearly harvest festival, Onam, is a 10-day event that starts on Attam and is concluded on Thiruvonam.</p>
+      </div>
+    </div>
+
+    <!-- Image Card 2 -->
+    <div class="image-card">
+      <img src="aluva.jpg" alt="Aluva Sivarathri Festival">
+      <div class="overlay">
+        <h3>Aluva Sivarathri Festival</h3>
+        <p>Celebrated in February-March, Aluva Sivarathri is held on the banks of Periyar River in Aluva. This day is celebrated to remember the occasion when Lord Shiva had consumed poison to save the destruction of the world.</p>
+      </div>
+    </div>
+
+    <!-- Image Card 3 -->
+    <div class="image-card">
+      <img src="thiruvathira.jpg" alt="Thiruvathira Festival">
+      <div class="overlay">
+        <h3>Thiruvathira Festival</h3>
+        <p>Celebrated in the Dhanu month (December-January), at Thiruvathira, the Thiruvathira festival is women's festivals. </p>
+      </div>
+    </div>
+
+ <!-- Image Card 3 -->
+    <div class="image-card">
+      <img src="kerala1.jpg" alt="Kerala Village Fair">
+      <div class="overlay">
+        <h3>Kerala Village Fair</h3>
+        <p>Celebrated in the month of January, the Kerala Village Fair is organized at the Kovalam beach. During this 10-day festival, a scene of a village is recreated.</p>
+      </div>
+    </div>
+
+ <!-- Image Card 3 -->
+    <div class="image-card">
+      <img src="navarathri.jpg" alt="Navarathri Festival">
+      <div class="overlay">
+        <h3>Navarathri Festival</h3>
+        <p>Celebrated in the month of Kanni (September-October), Navarathri is one of the most prominent Hindu festivals. During the festival, the 9 incarnations of Goddess Durga are worshipped.</p>
+      </div>
+    </div>
+ <!-- Image Card 3 -->
+    <div class="image-card">
+      <img src="nishagandhi.jpg" alt="Nishagandhi Dance and Music Festival">
+      <div class="overlay">
+        <h3>Nishagandhi Dance and Music Festival</h3>
+        <p>Organized at Nishagandhi Open Air Theatre, Kanakkunu Palace grounds in Trivandrum, Nishagandhi Dance and Music Festival is a celebration of Indian classical dance and music.</p>
+      </div>
+    </div>
+
+ <!-- Image Card 3 -->
+    <div class="image-card">
+      <img src="thrissur.jpg" alt="Thrissur Pooram Festival">
+      <div class="overlay">
+        <h3>Thrissur Pooram Festival</h3>
+        <p>Celebrated in April-May, Thrissur Pooram is a major festival held in Thrissur. The rulers of erstwhile Kochi state, Sakthan Thampuran founded this festival. </p>
+      </div>
+    </div>
+ <!-- Image Card 3 -->
+    <div class="image-card">
+      <img src="pongala.jpg" alt="Pongala Festival">
+      <div class="overlay">
+        <h3>Pongala Festival</h3>
+        <p>A 10- day festival, Pongala is organized at Attukal Bhagavathy temple, around 2 km from Trivandrum..</p>
+      </div>
+    </div>
+</div>
+
+
+<h1><h1>Kerala Cuisine</h1>
+ <div class="wrapper">
+        <div class="container">
+            <img src="appam.jpg" alt="Appam with Stew ">
+            <div class="description">
+                <p>Ask anybody from Kerala what their favourite dish is from back home and they will swear by appam and stew! I think it's justified for them to do so because appam is just something that seems to be a revolution in the food world. It is a rice pancake with a soft and thick centre and a crispy, paper thin outside.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="ldiyappam.webp" alt="ldiyappam">
+            <div class="description">
+                <p>Idiyappam is basically made of rice flour, water and salt. Numerous strands of vermicelli are entwined together to make this version of an appam. Also known as noolappam, this Kerala dish can be paired with any curry and still taste great!</p>
+            </div>
+        </div>
+    </div>
+
+ <div class="wrapper">
+        <div class="container">
+            <img src="nadan.webp" alt="Nadan Kozhi Varuthathu (Spicy Chicken Fry)">
+            <div class="description">
+                <p>Nadan Kozhi Varuthathu (Spicy Chicken Fry).You can never go wrong with chicken fry! You take a chicken which is the favourite meat of 99% of the entire population and fry it! Who doesn't love fried stuff?! So, this version of a chicken fry is something that is out of this world. Served on a banana leaf, the chicken is fried with onion, garlic, chilli, vinegar and coriander.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="banana.webp" alt=" Banana Fritters">
+            <div class="description">
+                <p>Pazham Pori or Ethakka Appam is juicy banana fritters that are a favourite tea time snack in Kerala. They are the perfect example of simple goodness. Ripe bananas coated in plain flour and deep fried in oil. Can anything go wrong? We don't think so!</p>
+            </div>
+        </div>
+    </div>
+
+<h1>Religion and Spirituality</h1>
+<br>
+<h2>01. Sree Padmanabhaswamy Temple</h2>
+            <img src="sree-padmanabhaswamy-temple.jpg" alt="Sree Padmanabhaswamy Temple
+">
+            <div class="description">
+                <p>Standing tall, covered in all gold and fine intricate designs, and showcasing the grandeur of the legendary Dravidian architecture at its best, this temple of Lord Vishnu is spirituality at its best. Located in Thiruvananthapuram this temple is famed for several reasons apart from being one of the oldest temples in the country. Having found its mention in various ancient texts like the Puranas it drew a lot of media attention when people found several treasures dating back to the olden times. The treasure that was found consisted of golden statues dedicated to Lord Vishnu, Gold Coins, Jewelry, a golden throne, and many more. This place of worship remains thronged with tourists, devotees, and visitors throughout the year.</p>
+            </div>
+
+
+<h2>02. Guruvayoor Srikrishna Temple</h2>
+            <img src="guruvayoor-srikrishna-temple.jpg" alt="guruvayoor-srikrishna-temple">
+            <div class="description">
+                <p>The people of Kerala are extremely religious and have a strong belief system that they follow strictly, which includes worshipping of various gods and goddesses. Guruvayoor Srikrishna Temple is dedicated to Lord Krishna and serves as the home for the 4 armed standing Krishna Deity who is worshipped here. The idol shows 4 arms of the lord and in each arm, he is seen holding different items in each hand like a conch, Sudarshana Chakra, mace, and the holy lotus basil. Devotees of Krishna from all over the world make it a point to visit this holy temple. Another interesting point of this temple is the presence of a simple water tank where Lord Shiva and his family have been believed to worshipped Lord Vishnu.
+</p>
+            </div>
+
+
+<h1>Top 10 Places to Visit in Kerala</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Place</th>
+                <th>Location</th>
+                <th>Speciality</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Munnar</td>
+                <td>Idukki District</td>
+                <td>Famous for its tea plantations, rolling hills, and cool climate.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Alleppey (Alappuzha)</td>
+                <td>Alappuzha District</td>
+                <td>Known as the "Venice of the East" for its backwaters and houseboat cruises.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kochi (Cochin)</td>
+                <td>Ernakulam District</td>
+                <td>Blend of modern and historical sites, including Fort Kochi and the Chinese fishing nets.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Wayanad</td>
+                <td>Wayanad District</td>
+                <td>Known for its lush greenery, waterfalls, and wildlife sanctuaries.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Thekkady</td>
+                <td>Idukki District</td>
+                <td>Famous for the Periyar Wildlife Sanctuary and spice plantations.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Kovalam</td>
+                <td>Thiruvananthapuram District</td>
+                <td>Renowned for its crescent-shaped beaches and vibrant seaside atmosphere.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Varkala</td>
+                <td>Thiruvananthapuram District</td>
+                <td>Cliffside beaches with stunning views and natural mineral springs.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Bekal</td>
+                <td>Kasaragod District</td>
+                <td>Known for the Bekal Fort and pristine beaches.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Thrissur</td>
+                <td>Thrissur District</td>
+                <td>Famous for the Thrissur Pooram festival and cultural heritage.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Vagamon</td>
+                <td>Idukki and Kottayam Districts</td>
+                <td>Hill station with serene meadows, pine forests, and trekking trails.</td>
+            </tr>
+        </tbody>
+    </table>
+
+<h2>If you want to know more about Kerala, visit this link:</h2>
+<a href="https://en.wikipedia.org/wiki/Kerala" target="_blank">Explore Kerala</a>
+      
+<hr>
+<h2>Feedback Form</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback here..." required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+
+</body>
+</html>
